@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="bg-gradient-to-tr from-sky-200 to-sky-500">
+  <section id="login" class="p-4 flex flex-col justify-center min-h-screen max-w-md mx-auto">
+    <div class="p-6 bg-sky-100 rounded">
+      <div class="flex items-center justify-center text-4xl font-black text-sky-900 m-3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 w-10 h-10" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z" />
+        </svg>
+      <h1 class="tracking-wide">SkyScraper<span class="font-mono">™</span></h1>
+      </div>
+        <form id="login_form" action="mail" method="POST" enctype="multipart/form-data" 
+        class="flex flex-col justify-center">
+        {% csrf_token %}
+
+          <label class="text-sm font-medium">sender_email</label>
+          <input id="sender_email" class="mb-3 px-2 py-1.5
+          mb-3 mt-1 block w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
+          focus:outline-none
+          focus:border-sky-500
+          focus:ring-1
+          focus:ring-sky-500
+          focus:invalid:border-red-500 focus:invalid:ring-red-500" type="email" name="sender_email" placeholder="wahyusa" required>
+          <label class="text-sm font-medium">Password</label>
+          <input id="password" class="
+          mb-3 mt-1 block w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
+          focus:outline-none
+          focus:border-sky-500
+          focus:ring-1
+          focus:ring-sky-500
+          focus:invalid:border-red-500 focus:invalid:ring-red-500" type="password" name="Password" placeholder="********" required>
+          <label class="text-sm font-medium">Subject</label>
+          <input id="subject" class="
+          mb-3 mt-1 block w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
+          focus:outline-none
+          focus:border-sky-500
+          focus:ring-1
+          focus:ring-sky-500
+          focus:invalid:border-red-500 focus:invalid:ring-red-500" type="text" name="Subject" placeholder="CSV file" required>
+          <label class="text-sm font-medium">CSV file</label>
+          <input id="myfile" class="
+          mb-3 mt-1 block w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
+          focus:outline-none
+          focus:border-sky-500
+          focus:ring-1
+          focus:ring-sky-500
+          focus:invalid:border-red-500 focus:invalid:ring-red-500" type="file" name="myfile" required>
+          <button id="btn" type="submit" class="btn btn-primary mr-2">Submit</button>
+
+        </form>
+    </div>
+  </section>
+  
+  <!-- This is an example component -->
+<div class="max-w-2xl mx-auto" style="display: flex;
+flex-direction: column;
+align-items: center;
+align-content: center;
+justify-content: center;
+">
+
+	<div class="p-4 max-w-md bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div class="flex justify-between items-center mb-4">
+        <h3 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Latest Customers</h3>
+        <a href="#" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+            View all
+        </a>
+   </div>
+   <div class="flow-root">
+        <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+            <li class="py-3 sm:py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-1.jpg" alt="Neil image">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                            Neil Sims
+                        </p>
+                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                            email@windster.com
+                        </p>
+                    </div>
+                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                        $320
+                    </div>
+                </div>
+            </li>
+            <li class="py-3 sm:py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-3.jpg" alt="Bonnie image">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                            Bonnie Green
+                        </p>
+                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                            email@windster.com
+                        </p>
+                    </div>
+                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                        $3467
+                    </div>
+                </div>
+            </li>
+            <li class="py-3 sm:py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-2.jpg" alt="Michael image">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                            Michael Gough
+                        </p>
+                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                            email@windster.com
+                        </p>
+                    </div>
+                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                        $67
+                    </div>
+                </div>
+            </li>
+            <li class="py-3 sm:py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-4.jpg" alt="Lana image">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                            Lana Byrd
+                        </p>
+                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                            email@windster.com
+                        </p>
+                    </div>
+                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                        $367
+                    </div>
+                </div>
+            </li>
+            <li class="pt-3 pb-0 sm:pt-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="Thomas image">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                            Thomes Lean
+                        </p>
+                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                            email@windster.com
+                        </p>
+                    </div>
+                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                        $2367
+                    </div>
+                </div>
+            </li>
+        </ul>
+   </div>
+</div>
+
+</div>
+
+</div>
+</body>
+</html>
